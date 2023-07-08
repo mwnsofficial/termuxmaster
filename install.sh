@@ -12,10 +12,10 @@ echo -e $b"➤ "$w" install paketnya sukses bro ..."
 cd $HOME/termuxmaster
 sleep 2
 echo -e $b"➤ "$w" coppying yacd-dashbord: "$g"yacd"$w
-cp yacd-gh-pages.zip /data/data/com.termux/files/home/.config/clash
+cp yacd-gh-pages.zip /.config/clash
 sleep 2
 echo -e $b"➤ "$w" coppying config.yaml: "$g"config"$w
-cp config.yaml /data/data/com.termux/files/home/.config/clash
+cp config.yaml /.config/clash
 sleep 2
 cd $HOME/.config/clash
 echo -e $b"➤ "$w" extracting yacd-dashbord: "$g"yacd"$w
@@ -24,4 +24,3 @@ sleep 3
 rm -r -f yacd-gh-pages.zip >&/dev/null
 sleep 2
 cd
-rm -r -f termuxmaster >&/dev/null
