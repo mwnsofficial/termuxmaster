@@ -12,6 +12,8 @@ pkg install unzip
 
 pkg install clash
 
-wget install https://github.com/mwnsofficial/termuxmaster.git
+git clone https://github.com/mwnsofficial/termuxmaster.git
+
+cd termuxmaster && bash install.sh
 
 http://127.0.0.1:9090/ui
