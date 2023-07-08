@@ -1,0 +1,42 @@
+mixed-port: 7890
+socks-port: 7891
+#redir-port: 7892
+port: 7893
+#tproxy-port: 7895
+mode: global
+log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret : ""
+bind-address: "*"
+external-ui: yacd-gh-pages
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 127.0.0.1:7894
+  use-hosts: true
+  nameserver:
+  - https://cloudflare-dns.com/dns-query
+  - tls://1dot1dot1dot1.cloudflare-dns.com
+  fallback:
+    - https://dns.google/dns-query
+  proxies:
+- name: "Trojan"
+  server: id-1.test3.net
+  type: trojan
+  port: 443
+  password: b217e7e0-1aa3-11ee-9c59-1239d0255272
+  udp: true
+  sni: zoom.us
+  skip-cert-verify: true
+proxy-groups:
+- name: SIMASTER
+  type: select
+  disable-udp: false
+  proxies:
+  - Trojan
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+rules:
+- MATCH,SIMASTER
