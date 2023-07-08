@@ -9,7 +9,7 @@ echo -e $b"➤ "$w"Clash Termux Simaster"
 echo -e $b"➤ "$w" master siapkan file nya ya bro ..."
 sleep 2
 echo -e $b"➤ "$w" install paketnya sukses bro ..."
-cd $HOME/.config/clash
+cd $HOME/termuxmaster
 sleep 2
 echo -e $b"➤ "$w" coppying yacd-dashbord: "$g"yacd"$w
 cp yacd-gh-pages.zip $HOME/.config/clash
@@ -17,11 +17,11 @@ sleep 2
 echo -e $b"➤ "$w" coppying config.yaml: "$g"config"$w
 cp config.yaml $HOME/.config/clash
 sleep 2
-cd storage/downloads/cft
+cd $HOME/.config/clash
 echo -e $b"➤ "$w" extracting yacd-dashbord: "$g"yacd"$w
 unzip yacd-gh-pages.zip >&/dev/null
 sleep 3
 rm -r -f yacd-gh-pages.zip >&/dev/null
 sleep 2
 cd
-rm -r -f clash >&/dev/null
+rm -r -f termuxmaster >&/dev/null
